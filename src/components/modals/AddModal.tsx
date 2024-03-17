@@ -10,7 +10,7 @@ import {
 } from './ModalElements';
 import modalCloseIcon from '../../assets/modalColseIcon.svg';
 import checkedIcon from '../../assets/checkIcon.svg';
-import { useContext, useState } from 'react';
+import { MouseEvent, useContext, useState } from 'react';
 import { ModalContext } from '../../pages/FolderPage/FolderPage';
 import useFoldersData from '../../hooks/useFoldersData';
 import { USERS_FOLDERS_URL } from '../../constants/urls';
@@ -21,7 +21,7 @@ function AddModal() {
 
   const folders = useFoldersData(USERS_FOLDERS_URL);
 
-  const handleFolderButtonClick = (e: Event, folderId) => {
+  const handleFolderButtonClick = (e: MouseEvent, folderId: number) => {
     e.preventDefault();
     setClickedFolderId(folderId);
   };
@@ -42,7 +42,9 @@ function AddModal() {
               folder.id !== 1 && (
                 <Folder
                   key={folder.id}
-                  onClick={(e: Event) => handleFolderButtonClick(e, folder.id)}
+                  onClick={(e: MouseEvent) =>
+                    handleFolderButtonClick(e, folder.id)
+                  }
                 >
                   <FolderInfo>
                     <FolderName $isClicked={isClicked}>

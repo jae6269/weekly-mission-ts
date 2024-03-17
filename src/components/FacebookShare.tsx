@@ -1,11 +1,15 @@
 import React from 'react';
-import { FacebookShareButton } from 'react-facebook';
+import { ShareButton } from 'react-facebook';
 
-const FacebookShare = ({ url, quote }) => {
+interface FacebookShareProps {
+  url: string;
+  quote: string;
+}
+const FacebookShare = ({ url, quote }: FacebookShareProps) => {
   return (
-    <FacebookShareButton url={url} quote={quote}>
+    <ShareButton url={url} quote={quote}>
       Share on Facebook
-    </FacebookShareButton>
+    </ShareButton>
   );
 };
 

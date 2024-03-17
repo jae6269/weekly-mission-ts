@@ -1,5 +1,5 @@
 import useInformationData from '../hooks/useInformationData';
-function Information(url) {
+function Information(url: string) {
   const myInfo = useInformationData(url);
 
   if (!myInfo) {

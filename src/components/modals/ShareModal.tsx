@@ -7,7 +7,7 @@ import {
   Name,
 } from './ModalElements';
 import modalCloseIcon from '../../assets/modalColseIcon.svg';
-import { useContext } from 'react';
+import { MouseEvent, useContext } from 'react';
 import { ModalContext } from '../../pages/FolderPage/FolderPage';
 import styled from 'styled-components';
 import { SHARE_BUTTONS } from '../../constants/modalConstants';
@@ -23,7 +23,7 @@ function ShareModal() {
   const name = shareModalPurpose.folderName;
   const folderId = shareModalPurpose.id;
 
-  const handleClick = (e, buttonId) => {
+  const handleClick = (e: MouseEvent, buttonId: number) => {
     switch (buttonId) {
       case 1:
         e.preventDefault();

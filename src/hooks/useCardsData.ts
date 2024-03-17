@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { formatDate, getLastTime } from '../utils/timeCalculater';
 import { useEffect } from 'react';
 import { CARDS, PROFILE } from '../constants/fetchConstants';
-function useCardsData(section, url) {
+
+function useCardsData(section: string, url: string) {
   const [owner, setOwner] = useState({
     ownerImg: '',
     ownerName: '',
     folderName: '',
   });
+
   const [linksArray, setLinksArray] = useState([]);
   useEffect(() => {
     const getData = async () => {

@@ -16,7 +16,11 @@ import {
   text는 현재 폴더의 이름,
   selectedFolderId는 선택된 폴더의 id값입니다.
 */
-function FolderOptionBar({ text, selectedFolderId }) {
+interface FolderOptionBarProps {
+  text: string;
+  selectedFolderId: number;
+}
+function FolderOptionBar({ text, selectedFolderId }: FolderOptionBarProps) {
   const { handleDeleteModalOpen, handleEditModalOpen, handleShareModalOpen } =
     useContext(ModalContext);
 

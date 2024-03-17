@@ -1,3 +1,3 @@
-export const CARDS = 'cards';
+export const CARDS: string = 'cards';
 
-export const PROFILE = 'profile';
+export const PROFILE: string = 'profile';

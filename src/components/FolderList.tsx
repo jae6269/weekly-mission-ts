@@ -23,8 +23,12 @@ function FolderList() {
   const links = useLinksData(linksFetchUrl);
   const folders = useFoldersData(foldersFetchUrl);
 
+  interface SelectedFolder {
+    id: number;
+    name: string;
+  }
   //FolderList -> FolderSortBar -> SortButton으로 내려주는 함수
-  const handleSortButtonClick = (newSelectedFolder) => {
+  const handleSortButtonClick = (newSelectedFolder: SelectedFolder) => {
     setSelectedFolder(newSelectedFolder);
     const query =
       newSelectedFolder.id == 1 ? '' : `?folderId=${newSelectedFolder.id}`;

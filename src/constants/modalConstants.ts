@@ -3,13 +3,20 @@ import facebookIcon from '../assets/facebookIcon.svg';
 import linkCopyIcon from '../assets/linkCopyIcon.svg';
 
 //modal purpose 상수
-export const FOLDER_RENAME = '폴더 이름 변경';
-export const FOLDER_ADD = '폴더 추가';
-export const FOLDER_DELETE = '폴더 삭제';
-export const LINK_DELETE = '링크 삭제';
+export const FOLDER_RENAME: string = '폴더 이름 변경';
+export const FOLDER_ADD: string = '폴더 추가';
+export const FOLDER_DELETE: string = '폴더 삭제';
+export const LINK_DELETE: string = '링크 삭제';
+
+interface ShareButton {
+  id: number;
+  name: string;
+  img: any;
+  background: string;
+}
 
 //share modal buttons
-export const SHARE_BUTTONS = [
+export const SHARE_BUTTONS: ShareButton[] = [
   {
     id: 1,
     name: '카카오톡',

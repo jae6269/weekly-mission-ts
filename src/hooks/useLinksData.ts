@@ -12,7 +12,7 @@ import noneImg from '../assets/noneImg.svg';
   상위컴포넌트에서 url이 바뀌면 리랜더링
  */
 
-function useLinksData(url) {
+function useLinksData(url: string) {
   const [linksArray, setLinksArray] = useState([]);
 
   useEffect(() => {

@@ -1,6 +1,13 @@
+import { MouseEvent } from 'react';
 import styled from 'styled-components';
 
-function OptionButton({ id, svg, text, handleModalOpen }) {
+interface OptionButtonProps {
+  id: number;
+  svg: string;
+  text: string;
+  handleModalOpen: (e: MouseEvent) => void;
+}
+function OptionButton({ id, svg, text, handleModalOpen }: OptionButtonProps) {
   return (
     <Button onClick={handleModalOpen}>
       <img src={svg} alt={text} />

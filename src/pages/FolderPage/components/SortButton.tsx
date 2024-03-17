@@ -1,9 +1,21 @@
+import { MouseEvent } from 'react';
 import styled from 'styled-components';
 /*
   즐겨찾기 버튼의 styled component 입니다.
 */
 
-function SortButton({ id, text, handleClick, isClicked = false }) {
+interface SortButtonProps {
+  id: number;
+  text: string;
+  handleClick: (e: MouseEvent) => void;
+  isClicked: boolean;
+}
+function SortButton({
+  id,
+  text,
+  handleClick,
+  isClicked = false,
+}: SortButtonProps) {
   const handleSendSelectedFolder = (e) => {
     const newFolder = {
       id: id,

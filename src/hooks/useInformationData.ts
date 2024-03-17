@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useInformationData({ url }) {
+export function useInformationData(url: string) {
   const [myInfo, setMyInfo] = useState(0);
 
   useEffect(() => {

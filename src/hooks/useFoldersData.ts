@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 */
 
-function useFoldersData(url) {
+function useFoldersData(url: string) {
   const [folders, setFolders] = useState([]);
 
   useEffect(() => {

@@ -2,7 +2,12 @@ import styled from 'styled-components';
 import { LINK_DELETE } from '../../../constants/modalConstants';
 import { useContext } from 'react';
 import { ModalContext } from '../FolderPage';
-function PopOver({ id, url }) {
+
+interface PopOverProps {
+  id: number;
+  url: string;
+}
+function PopOver({ id, url }: PopOverProps) {
   const { handleDeleteModalOpen, handleAddModalOpen } =
     useContext(ModalContext);
   const handleLinkDeleteModalOpen = (e) => {

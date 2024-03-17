@@ -1,7 +1,11 @@
 import React from 'react';
 import '../styles/header.css';
 import Profile from './Information';
-function Header({ url }) {
+
+interface HeaderProp {
+  url: string;
+}
+function Header({ url }: HeaderProp) {
   return (
     <>
       <header>

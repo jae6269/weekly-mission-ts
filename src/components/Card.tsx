@@ -11,8 +11,18 @@ interface CardProps {
   imgUrl?: string;
   title: string;
   description: string;
+  date: string;
+  url: string;
 }
-function Card({ id, time, imgUrl = noneImg, title, description, date, url }) {
+function Card({
+  id,
+  time,
+  imgUrl = noneImg,
+  title,
+  description,
+  date,
+  url,
+}: CardProps) {
   const [isPopOverOpen, setIsPopOverOpen] = useState(false);
 
   const handleClick = (e: Event) => {
@@ -30,7 +40,7 @@ function Card({ id, time, imgUrl = noneImg, title, description, date, url }) {
       <div className="card__texts">
         <div className="card__texts--time">
           <p>{time}</p>
-          <button onClick={handleClick}>
+          <button onClick={() => handleClick}>
             <img src={meatballsIcon} alt="Menu" />
           </button>
           {isPopOverOpen && <PopOver id={id} url={url} />}
