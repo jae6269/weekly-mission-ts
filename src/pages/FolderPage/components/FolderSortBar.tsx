@@ -1,10 +1,11 @@
 import SortButton from './SortButton';
 import '../styles/folderSortBar.css';
 import FolderAddButton from './FolderAddButton';
+import { MouseEvent } from 'react';
 
 interface FolderSortBarProps {
   folders: any[];
-  handleClick: (e: Event) => void;
+  handleClick: any;
   selectedId: number;
 }
 function FolderSortBar({

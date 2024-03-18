@@ -4,20 +4,26 @@ import styled from 'styled-components';
   즐겨찾기 버튼의 styled component 입니다.
 */
 
+interface NewFolder {
+  id: number;
+  name: string;
+}
+
 interface SortButtonProps {
   id: number;
   text: string;
-  handleClick: (e: MouseEvent) => void;
+  handleClick: (newFolder: NewFolder) => void;
   isClicked: boolean;
 }
+
 function SortButton({
   id,
   text,
   handleClick,
   isClicked = false,
 }: SortButtonProps) {
-  const handleSendSelectedFolder = (e) => {
-    const newFolder = {
+  const handleSendSelectedFolder = (e: MouseEvent) => {
+    const newFolder: NewFolder = {
       id: id,
       name: text,
     };
